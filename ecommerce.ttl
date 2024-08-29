@@ -1,0 +1,296 @@
+@prefix : <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce/> .
+
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#temVendaCruzada
+:temVendaCruzada rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#visualizou
+:visualizou rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#comprou
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#comprou> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#recomenda
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#recomenda> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#Venda_cruzada
+:Venda_cruzada rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Categoria
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Categoria> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Pessoa> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Pessoa
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Pessoa> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#_danilo
+:_danilo rdf:type owl:NamedIndividual ,
+                  <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> ;
+         <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#comprou> :martelo .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#_felippe
+:_felippe rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> ;
+          <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#comprou> :sm_s23 .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#_gustavo
+:_gustavo rdf:type owl:NamedIndividual ,
+                   <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> ;
+          :visualizou :serrote .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#alicate
+:alicate rdf:type owl:NamedIndividual ,
+                  <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+         <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :ferramentas .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#carregador
+:carregador rdf:type owl:NamedIndividual ,
+                     :Venda_cruzada ;
+            <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :eletronicos .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#eletronicos
+:eletronicos rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Categoria> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#ferramentas
+:ferramentas rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Categoria> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#fone_de_ouvido
+:fone_de_ouvido rdf:type owl:NamedIndividual ,
+                         :Venda_cruzada ;
+                <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :eletronicos .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#iphone_16
+:iphone_16 rdf:type owl:NamedIndividual ,
+                    <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+           :temVendaCruzada :carregador ;
+           <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :eletronicos .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#marca_pagina
+:marca_pagina rdf:type owl:NamedIndividual ,
+                       :Venda_cruzada ;
+              <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#livros> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#martelo
+:martelo rdf:type owl:NamedIndividual ,
+                  <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+         :temVendaCruzada :pregos ;
+         <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :ferramentas .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#pregos
+:pregos rdf:type owl:NamedIndividual ,
+                 :Venda_cruzada ;
+        <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :ferramentas .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#serrote
+:serrote rdf:type owl:NamedIndividual ,
+                  <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+         <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :ferramentas .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecomerce#sm_s23
+:sm_s23 rdf:type owl:NamedIndividual ,
+                 <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+        :temVendaCruzada :carregador ,
+                         :fone_de_ouvido ;
+        <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> :eletronicos .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#_joão
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#_joão> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> ;
+                                                                             <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#comprou> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#alice_no_pais_das_maravilhas> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#alice_no_pais_das_maravilhas
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#alice_no_pais_das_maravilhas> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+                                                                                                    :temVendaCruzada :marca_pagina ;
+                                                                                                    <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#livros> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#livros
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#livros> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Categoria> .
+
+
+###  http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#principe_maquiavel
+<http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#principe_maquiavel> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+                                                                                          :temVendaCruzada :marca_pagina ;
+                                                                                          <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#livros> .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:p1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:cat rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:p2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:vc rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "recomendacao_se_visualizou" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :visualizou ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p1 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :cat
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Produto> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p2
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p2 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :cat
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#recomenda> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :p2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "recomendacao_se_comprou" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#Comprador> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#comprou> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :p1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :p1 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :cat
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :temVendaCruzada ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :p1 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :vc
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#temCategoria> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :vc ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :cat
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/joaovitor.dti/ontologies/2024/7/ecommerce#recomenda> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :vc
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
